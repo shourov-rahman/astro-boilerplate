@@ -14,7 +14,15 @@ import robotsTxt from 'astro-robots-txt';
 export default defineConfig({
   site: 'https://example.com',
   output: 'static',
-  adapter: cloudflare(),
+  adapter: cloudflare({
+    imageService: 'compile',
+  }),
+  session: {
+    driver: 'cloudflare-kv-binding',
+    options: {
+      binding: 'SESSION',
+    },
+  },
   vite: {
     plugins: [tailwindcss()],
   },
