@@ -1,0 +1,207 @@
+{
+  "global-navigation-header": {
+    "logo": "src/assets/logo.jpeg",
+    "links": [
+      {
+        "text": "Home",
+        "url": ""
+      },
+      {
+        "text": "About",
+        "url": "/about"
+      },
+      {
+        "text": "Services",
+        "url": "/services"
+      },
+      {
+        "text": "Contact",
+        "url": "/contact"
+      }
+    ]
+  },
+  "hero": {
+    "tagline": "Empowering Decisions with Precision",
+    "headline": "Mapping Precision for Tomorrow",
+    "description": "Transforming Bangladesh’s terrain with precise, high-quality GIS surveying and consultancy. Trust Geospatial Works.",
+    "primaryCTA": {
+      "text": "Read More",
+      "url": "/about"
+    },
+    "secondaryCTA": {
+      "text": "Contact Us",
+      "url": "/contact"
+    },
+    "image": {
+      "src": "src/assets/hero-image.jpg",
+      "alt": ""
+    }
+  },
+
+  "trustBar": {
+    "heading": "Organizations We’ve Worked With",
+    "logos": [
+      {
+        "alt": "CEGIS",
+        "src": "src/assets/cegis_500x500.png"
+      },
+      {
+        "alt": "EQMS",
+        "src": "src/assets/eqms_500x500.png"
+      },
+      {
+        "alt": "EPC",
+        "src": "src/assets/epc_500x500.png"
+      },
+      {
+        "alt": "LGED",
+        "src": "src/assets/lged_500*500.jpg"
+      },
+      {
+        "alt": "Dhaka North",
+        "src": "src/assets/dhaka_north_city_500x500.png"
+      },
+      {
+        "alt": "Dhaka South",
+        "src": "src/assets/dhaka_south_city_500x500.png"
+      },
+      {
+        "alt": "PDB",
+        "src": "src/assets/pdb_500*500.png"
+      }
+    ]
+  },
+
+  "service-section-overview": [
+    {
+      "serviceIcon": "topography",
+      "serviceTitle": "Accurate Topography Surveys",
+      "serviceSummary": "Transform your project with our accurate topography surveys, expertly conducted to ensure precise results."
+    },
+    {
+      "serviceIcon": "geotechnical",
+      "serviceTitle": "Comprehensive Geotechnical and Hydro-geological Services",
+      "serviceSummary": "Transform your project with our comprehensive geotechnical and hydro-geological services."
+    },
+    {
+      "serviceIcon": "bathymetry",
+      "serviceTitle": "Precise Bathymetry Surveys",
+      "serviceSummary": "Tailored bathymetry surveys that provide accurate and detailed underwater data."
+    },
+    {
+      "serviceIcon": "digital-survey",
+      "serviceTitle": "Digital Surveying",
+      "serviceSummary": "Modern surveying techniques using advanced instruments and UAV technology."
+    },
+    {
+      "serviceIcon": "geospatial-consultancy",
+      "serviceTitle": "Geospatial Consultancy",
+      "serviceSummary": "Strategic geospatial planning and GIS-based decision support services."
+    },
+    {
+      "serviceIcon": "remote-sensing",
+      "serviceTitle": "Remote Sensing",
+      "serviceSummary": "Advanced satellite and remote sensing data analysis for environmental and resource monitoring."
+    }
+  ],
+
+  "gisSurveyExpertise": {
+    "headline": "Our Skilled GIS Surveyors Deliver Precise Geospatial Solutions",
+    "supporting copy": "Transforming terrains with precise surveys and innovative technologies. Enhancing project outcomes. Let us turn your vision into reality.",
+    "image": {
+      "src": "src/assets/gis-survey-expertise.jpeg",
+      "alt": "GIS surveyors conducting field surveys using advanced GNSS and GIS equipment"
+    }
+  },
+
+  "experienceImpactMetrics": {
+    "metrics": [
+      {
+        "value": "5+",
+        "title": "Years of Excellence",
+        "description": "With over 5 years of experience, we have mastered our skills in GIS surveying and consultancy services."
+      },
+      {
+        "value": "10+",
+        "title": "Satisfied Clients, Accurate Surveys",
+        "description": "We have successfully served over 1000 clients who have relied on our precise and reliable survey solutions."
+      },
+      {
+        "value": "50+",
+        "title": "Delivering Comprehensive Survey Solutions",
+        "description": "Our comprehensive survey solutions have been recognized by leading industry professionals and have garnered numerous commendations."
+      }
+    ]
+  },
+
+  "orthophotoSection": {
+    "background-image": {
+      "src": "src/assets/orthophoto-background-image.jpg",
+      "alt": ""
+    },
+    "label": "Orthophoto",
+    "heading": "Accurate aerial image corrected for true ground position.",
+    "description": "Orthophotos are aerial images corrected to remove distortion caused by terrain relief and camera angle. They offer accurate representations of the Earth's surface, suitable for mapping and analysis."
+  },
+
+  "specializedCapabilities": {
+    "headline": " Our Specialized Capabilities",
+    "items": [
+      {
+        "label": "Detailed Topography Surveys",
+        "title": "Comprehensive Bathymetry Studies",
+        "background image": {
+          "src": "src/assets/topography-surveys.webp",
+          "alt": "Survey team conducting bathymetric survey on a river using a boat"
+        }
+      },
+      {
+        "label": "Geotechnical Site Analysis",
+        "title": "Hydro-Geological Studies",
+        "background image": {
+          "src": "src/assets/hydro-geological-studies.jpg",
+          "alt": "Ocean water and rock formations representing hydro-geological analysis"
+        }
+      },
+      {
+        "label": "Precise Land Surveying",
+        "title": "Advanced RTK Drone Mapping",
+        "background image": {
+          "src": "src/assets/precise-land-surveying.webp",
+          "alt": "Engineer analyzing land survey drawings during RTK drone mapping"
+        }
+      },
+      {
+        "label": "Spatial Intelligence",
+        "title": "Transforming Sites with Innovative GIS Solutions",
+        "image": {
+          "src": "src/assets/spatial-intelligence.webp",
+          "alt": "Aerial view of dense urban area representing GIS-based site transformation"
+        }
+      }
+    ]
+  },
+
+  "visionStatement": {
+    "headline": "Our Vision",
+    "description": "Since its establishment,Geospatial Works aim is to be known as a multidisciplinary consulting firm with the ability to complete projects successfully in various fields of consulting services in which we specialize. The central functions are managed through a number of units, including Physical Planning, Human Resource Development, Research & Development, Quality & System Management, GIS in Geospatial & Geotechnical arena, Information Technology (IT), Quantitative and qualitative surveying.",
+    "background-image": {
+      "src": "src/assets/vision-background-image.jpg",
+      "alt": "Geospatial map background representing planning, GIS, and multidisciplinary consulting services"
+    }
+  },
+
+  "footer": {
+    "contact": {
+      "address": "64/1 (D1), Lake Circus, Kalabagan, Dhaka 1205, Bangladesh",
+      "phone": "+88 01303772216, +88 01713907779",
+      "email": "info@geospatialworks.com.bd"
+    },
+    "social": [
+      { "platform": "facebook", "url": "" },
+      { "platform": "linkedin", "url": "" }
+    ],
+    "map": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7303.6037065096225!2d90.34446873016357!3d23.754444355650044!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b90f078a6fbf%3A0x74f32f836ee242a4!2sGEOSPATIAL%20WORKS!5e0!3m2!1sen!2sbd!4v1769362807890!5m2!1sen!2sbd",
+    "copyright": "© Geospatial Works. All rights reserved."
+  }
+}
