@@ -8,6 +8,7 @@ import cloudflare from '@astrojs/cloudflare';
 import mdx from '@astrojs/mdx';
 import partytown from '@astrojs/partytown';
 import sitemap from '@astrojs/sitemap';
+import icon from 'astro-icon';
 import robotsTxt from 'astro-robots-txt';
 
 // https://astro.build/config
@@ -35,6 +36,7 @@ export default defineConfig({
       },
     }),
     alpinejs(),
+    icon(),
     robotsTxt(),
   ],
 });
