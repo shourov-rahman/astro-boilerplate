@@ -86,6 +86,7 @@ src/
 - **NEVER use `JSX.Element` namespace** - use React types directly
 
 ```typescript
+ 
 // ✅ CORRECT: Modern React 19 typing
 import { ReactElement } from 'react';
 
@@ -265,74 +266,7 @@ const envSchema = z.object({
 export const env = envSchema.parse(process.env);
 ```
 
-## 🎨 CSS & Layout Architecture (Elementor-Compatible)
 
-### Core Layout Philosophy (MANDATORY)
-
-This project follows a **container-first layout model**, inspired by Elementor’s core system.
-
-> **UI is always structured as Containers → Elements**
-> Never elements alone.
-
-This applies to:
-
-- React components
-- CSS architecture
-- Tailwind / utility usage
-- Design handoff thinking
-
-### 🧱 Container-Based Layout System (NON-NEGOTIABLE)
-
-#### Container Rules
-
-- A **Container is a layout primitive**, not a visual element
-- Containers:
-  - Control **layout, spacing, alignment**
-  - Always use **Flexbox**
-- Containers may contain:
-  - Child containers
-  - Grandchild containers
-  - UI elements
-
-#### Container Hierarchy Example
-
-```
-Container (Section)
-└─ Container (Content Wrapper)
-   ├─ Heading
-   ├─ Heading
-   ├─ Container (Button Group)
-   │  ├─ Button
-   │  └─ Button
-   ├─ Container (Features Grid)
-   │  ├─ Container (Feature)
-   │  │  ├─ Icon
-   │  │  └─ Heading
-   │  ├─ Container (Feature)
-   │  │  ├─ Icon
-   │  │  └─ Heading
-   │  └─ Container (Feature)
-   │     ├─ Icon
-   │     └─ Heading
-   └─ Container (Media)
-      └─ Image
-```
-
-This same hierarchy **must map cleanly** to:
-
-- React component trees
-- CSS layout layers
-- Elementor containers (if ported to Elementor)
-
----
-
-### ✅ Required Outcome
-
-Every UI section must satisfy:
-
-- ✔ Can be rebuilt 1:1 in Elementor
-- ✔ Has clear layout vs visual responsibility
-- ✔ Uses Flexbox at every layout level
 
 ## 🚀 Performance Guidelines
 
@@ -343,6 +277,21 @@ Every UI section must satisfy:
 - **Dynamic imports** for large client components
 - **Image optimization** with next/image
 - **Font optimization** with next/font
+
+## Design and Styling
+
+- Use tailwind css for styling
+- **Strictly follow `ui-design-guide.md`**.
+
+### Utility-First Example
+
+```astro
+<!-- Swiss Style Card Component -->
+<div class="flex flex-col border-2 border-gray-200 bg-gray-50 p-6 rounded-none hover:border-red-600 transition-colors duration-300">
+  <h2 class="text-4xl font-bold uppercase tracking-tighter text-gray-950">Title</h2>
+  <span class="mt-2 text-sm uppercase tracking-wider text-gray-600">Category</span>
+</div>
+```
 
 ## ⚠️ CRITICAL GUIDELINES (MUST FOLLOW ALL)
 

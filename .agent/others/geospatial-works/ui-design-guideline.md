@@ -244,7 +244,7 @@ Precise, purposeful motion reflecting technical accuracy
 
 ## 7. UI Icons & Imagery
 
-### Icons (Lucide React)
+### Icons 
 
 #### Light Theme
 * **Color**: `text-blue-600` for primary actions, `text-slate-600` for secondary

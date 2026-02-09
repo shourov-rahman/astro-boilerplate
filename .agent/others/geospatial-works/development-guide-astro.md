@@ -14,7 +14,7 @@ Avoid building functionality on speculation. Implement features only when they a
 -   **Performance by Default**: Static-first with selective hydration for optimal performance.
 -   **Content-Driven**: Optimized for content-heavy websites with type-safe content management.
 -   **Zero JavaScript by Default**: Only ship JavaScript when explicitly needed.
--   **Utility-First Styling**: Leverage Tailwind CSS for rapid, consistent UI development.
+-   **Utility-First Styling**: Leverage Tailwind CSS to implement the **Swiss Grid / International Typographic Style** defined in `ui-design-guide.md`.
 
 ## 🤖 AI Assistant Guidelines
 
@@ -225,31 +225,25 @@ const userPreferences = await getUserPreferences(Astro.locals.userId);
 ---
 ```
 
-## 🎨 Styling with Tailwind CSS
+## 🎨 Design & Styling
 
-### Utility-First
+- Use tailwind css for styling
+- **Strictly follow `ui-design-guide.md`**.
 
-Always prefer Tailwind utility classes over custom CSS.
+### Utility-First Example
 
 ```astro
-<div class="flex items-center justify-between p-4 bg-gray-100 rounded-lg">
-  <h2 class="text-xl font-bold text-gray-800">Title</h2>
+<!-- Swiss Style Card Component -->
+<div class="flex flex-col border-2 border-gray-200 bg-gray-50 p-6 rounded-none hover:border-red-600 transition-colors duration-300">
+  <h2 class="text-4xl font-bold uppercase tracking-tighter text-gray-950">Title</h2>
+  <span class="mt-2 text-sm uppercase tracking-wider text-gray-600">Category</span>
 </div>
 ```
-
-### Config
-
-Ensure `tailwind.config.mjs` or `astro.config.mjs` (for Tailwind v4) is correctly set up.
-Tailwind v4 is used via the Vite plugin.
 
 ## 🎨 Icon Strategy
 -   **MUST use `astro-icon`**: Use the `astro-icon` package for all icons to ensure SVG optimization and consistency.
 -   **Icon Collection**: Prefer using standard collections (e.g., `lucide`, `heroicons`, or `material-design-icons`) via `astro-icon`. Avoid using raw SVGs or emojis for UI icons.
--   **Consistent Base Styles**: All icons should inherit color (`text-current`) and have standard sizing unless a specific variant is required.
--   **Standard Sizing**: Use Tailwind utility classes for sizing.
-    -   Default: `size-6` (24px) for primary UI elements.
-    -   Small: `size-4` (16px) for inline or dense UI.
-    -   Large: `size-8` (32px) or larger for feature highlights.
+
 
 ## ⚠️ CRITICAL GUIDELINES (MUST FOLLOW ALL)
 

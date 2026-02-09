@@ -1,4 +1,3 @@
-# Complete UI Design System
 
 ## 1. UI Style and Philosophy
 
@@ -339,7 +338,7 @@ Smooth fade with 200ms duration between page loads
 
 ## 7. UI Icons and Imagery
 
-### Icon System (Lucide React)
+### Icon System 
 * **Style**: 2px stroke width (default)
 * **Color**: `text-rose-500` (primary), `text-slate-700` (secondary), `text-amber-600` (accent)
 * **Sizing**: 
