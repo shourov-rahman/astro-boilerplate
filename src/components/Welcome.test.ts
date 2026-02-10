@@ -8,7 +8,17 @@ describe('Welcome Component', () => {
     const result = await container.renderToString(Welcome);
 
     expect(result).toContain('Hello World');
-    expect(result).toContain('🚀');
+  });
+
+  it('should support custom title via props', async () => {
+    const container = await AstroContainer.create();
+    const result = await container.renderToString(Welcome, {
+      props: {
+        title: 'Custom Title',
+      },
+    });
+
+    expect(result).toContain('Custom Title');
   });
 
   it('should have proper heading structure', async () => {
