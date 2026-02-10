@@ -8,7 +8,16 @@
     "preview": "wrangler pages dev dist",
     "astro": "astro",
     "lint": "eslint .",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "test:run": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "test:e2e": "playwright test",
+    "test:e2e:ui": "playwright test --ui",
+    "test:e2e:debug": "playwright test --debug",
+    "test:e2e:chromium": "playwright test --project=chromium",
+    "test:all": "pnpm run test:run && pnpm run build && pnpm run test:e2e"
   },
   "dependencies": {
     "@astrojs/alpinejs": "^0.4.9",
@@ -35,16 +44,21 @@
   },
   "devDependencies": {
     "@iconify-json/lucide": "^1.2.89",
+    "@playwright/test": "^1.58.2",
     "@types/alpinejs": "^3.13.11",
+    "@types/node": "^25.2.2",
     "@typescript-eslint/eslint-plugin": "^8.53.1",
     "@typescript-eslint/parser": "^8.53.1",
+    "@vitest/ui": "^4.0.18",
     "eslint": "^9.39.2",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-astro": "^1.5.0",
+    "happy-dom": "^20.5.3",
     "prettier": "^3.8.1",
     "prettier-plugin-astro": "^0.14.1",
     "prettier-plugin-tailwindcss": "^0.7.2",
     "typescript-eslint": "^8.53.1",
+    "vitest": "^4.0.18",
     "wrangler": "^4.63.0"
   }
 }
