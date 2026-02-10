@@ -1,6 +1,8 @@
-# Comprehensive Code Quality Review
+---
+name: code review
+description: Perform comprehensive code review
+---
 
-Perform comprehensive code quality review
 
 ## Instructions
 

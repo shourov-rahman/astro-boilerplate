@@ -1,3 +1,8 @@
+---
+trigger: always_on
+---
+
+
 ## Core Development Philosophy
 
 ### KISS (Keep It Simple, Stupid)

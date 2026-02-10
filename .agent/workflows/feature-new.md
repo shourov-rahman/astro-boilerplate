@@ -1,4 +1,5 @@
 ---
+name: new feature
 description: Implements a new feature 
 ---
 

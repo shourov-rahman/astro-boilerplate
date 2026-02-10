@@ -1,3 +1,7 @@
+---
+trigger: always_on
+---
+
 ## Design Compliance
 
 - All UI output **must be 100% compliant** with `@ui-design-guide.md`.

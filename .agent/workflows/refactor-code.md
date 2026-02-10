@@ -1,6 +1,7 @@
-# Intelligently Refactor and Improve Code Quality
-
-Intelligently refactor and improve code quality
+---
+name: Refactor Code
+description: Intelligently refactor and improve code quality
+---
 
 ## Instructions
 

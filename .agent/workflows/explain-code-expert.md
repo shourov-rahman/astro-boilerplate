@@ -1,6 +1,7 @@
-# Analyze and Explain Code Functionality
-
-Analyze and explain code functionality
+---
+name: explain code
+description: Analyze and explain code functionality
+---
 
 ## Instructions
 
@@ -147,6 +148,11 @@ Performance Notes: Uses indexes on filtered columns, implements connection pooli
     - Identify common failure points
     - Describe logging and monitoring approaches
     - Suggest testing strategies
+
+17. **Documentation Phase**:
+    - Search the `docs` folder. Create a nested folder name `explain-code` inside docs. Construct a filename based on the argument: `docs/explain-code/<sanitized_feature_name>.md` (e.g., `login-flow.md`).
+    - Compile all findings into this markdown document.
+    - Ensure the document is well-structured, easy to navigate, and uses clear headings.
 
 **Language-Specific Considerations:**
 

@@ -1,5 +1,5 @@
 ---
-description: Understanding code
+description: Explain Code Intermediate
 ---
 
 You are tasked with deeply understanding the "$Argument" feature or code.
@@ -22,7 +22,7 @@ Please execute the following structured analysis:
     - **Critique**: specific potential issues, limitations, performance concerns, or edge cases.
 
 4.  **Documentation Phase**:
-    - Construct a filename based on the argument: `.agent/others/analysis-<sanitized_feature_name>.md` (e.g., `analysis-login-flow.md`).
+    - Search the `docs` folder. Create a nested folder name `explain-code` inside docs. Construct a filename based on the argument: `docs/explain-code/<sanitized_feature_name>.md` (e.g., `login-flow.md`).
     - Compile all findings into this markdown document.
     - Ensure the document is well-structured, easy to navigate, and uses clear headings.
 
