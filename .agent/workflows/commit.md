@@ -20,12 +20,11 @@ Or with options:
 1. Unless specified with `--no-verify`, automatically runs pre-commit checks:
    - `pnpm lint` to ensure code quality
    - `pnpm build` to verify the build succeeds
-2. Checks which files are staged with `git status`
-3. If 0 files are staged, automatically adds all modified and new files with `git add`
-4. Performs a `git diff` to understand what changes are being committed
-5. Analyzes the diff to determine if multiple distinct logical changes are present
-6. If multiple distinct changes are detected, suggests breaking the commit into multiple smaller commits
-7. For each commit (or the single commit if not split), creates a commit message using emoji conventional commit format
+2. Performs a `git diff` to understand what changes are being committed
+3. Analyzes the diff to determine if multiple distinct logical changes are present
+4. If multiple distinct changes are detected, suggests breaking the commit into multiple smaller commits
+5. For each commit (or the single commit if not split), take necessary steps to create commit message or messages 
+
 
 ## Best Practices for Commits
 
@@ -54,24 +53,6 @@ When analyzing the diff, consider splitting commits based on these criteria:
 3. **File patterns**: Changes to different types of files (e.g., source code vs documentation)
 4. **Logical grouping**: Changes that would be easier to understand or review separately
 5. **Size**: Very large changes that would be clearer if broken down
-
-## Examples
-
-📘 docs: update README with project features and setup instructions
-
-- Added project-specific features (Astro 5, Tailwind v4, AlpineJS).
-- Documented the new project structure.
-- Updated installation and development commands for pnpm.
-- Added configuration details for Tailwind v4 and SEO.
-
-📌 chore: initialize comprehensive astro boilerplate with tailwind v4 and cloudflare
-
-- Integrated Tailwind CSS v4 and AlpineJS.
-- Configured Astro integrations: MDX, Sitemap, Partytown, and Robots.txt.
-- Added Cloudflare adapter for deployment.
-- Set up ESLint and Prettier for code formatting and linting.
-- Enhanced SEO with Astro SEO and meta tags in Layout.astro.
-- Cleaned up default assets and scaffolded project directory structure.
 
 
 ## Command Options
