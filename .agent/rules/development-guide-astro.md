@@ -187,6 +187,96 @@ const { Content } = await post.render();
 </BlogLayout>
 ```
 
+## 🧪 Testing Strategy 
+
+### MUST Meet These Testing Standards
+
+- **MINIMUM 80% code coverage** - NO EXCEPTIONS
+- **MUST use Vitest** for unit and component tests (Jest-compatible, Vite-native)
+- **MUST use Astro Container API** for component testing
+- **MUST test islands separately** from static components
+- **MUST mock external dependencies** appropriately
+
+### Vitest Configuration (MANDATORY)
+
+```typescript
+// vitest.config.ts
+import { defineConfig } from "vitest/config";
+import { getViteConfig } from "astro/config";
+
+export default defineConfig(
+  getViteConfig({
+    test: {
+      environment: "happy-dom", // or 'jsdom'
+      coverage: {
+        reporter: ["text", "json", "html"],
+        threshold: {
+          global: {
+            branches: 80,
+            functions: 80,
+            lines: 80,
+            statements: 80,
+          },
+        },
+      },
+    },
+  }),
+);
+```
+
+### Component Testing with Container API
+
+```typescript
+// src/components/__tests__/Card.test.ts
+import { experimental_AstroContainer as AstroContainer } from "astro/container";
+import { expect, test } from "vitest";
+import Card from "../Card.astro";
+
+test("Card component renders correctly", async () => {
+  const container = await AstroContainer.create();
+  const result = await container.renderToString(Card, {
+    props: {
+      title: "Test Title",
+      description: "Test description",
+    },
+  });
+
+  expect(result).toContain("Test Title");
+  expect(result).toContain("Test description");
+});
+
+test("Card component handles missing props gracefully", async () => {
+  const container = await AstroContainer.create();
+  const result = await container.renderToString(Card, {
+    props: { title: "Test Title" },
+  });
+
+  expect(result).toContain("Test Title");
+  expect(result).not.toContain("undefined");
+});
+```
+
+### Integration Testing for API Routes
+
+```typescript
+// src/pages/api/__tests__/newsletter.test.ts
+import { expect, test } from "vitest";
+
+test("POST /api/newsletter validates email", async () => {
+  const response = await fetch("/api/newsletter", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ email: "invalid-email", name: "Test" }),
+  });
+
+  expect(response.status).toBe(400);
+  const data = await response.json();
+  expect(data.error).toBe("Validation failed");
+});
+```
+
+
+
 ## 🚀 Performance Optimization
 
 ### Image Optimization (MANDATORY)
@@ -259,6 +349,8 @@ const userPreferences = await getUserPreferences(Astro.locals.userId);
 10. **NEVER use `any` type** - leverage Astro's built-in type safety.
 11. **ALWAYS Lint & Format** - Run `pnpm lint` and `pnpm format` before committing.
 12. **Cloudflare Compatibility** - Ensure all server-side code is compatible with Cloudflare Workers runtime.
+13. **MINIMUM 80% test coverage** - Use Vitest with Container API
+
 
 ### FORBIDDEN Practices
 
