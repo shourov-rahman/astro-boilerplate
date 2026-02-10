@@ -1,3 +1,7 @@
+---
+title: 'Testing Guide'
+description: 'Guide for unit and end-to-end testing with Vitest and Playwright.'
+---
 # Testing Guide
 
 This project uses **Vitest** for unit tests and **Playwright** for end-to-end (e2e) tests, following Astro best practices.

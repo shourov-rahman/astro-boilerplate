@@ -1,3 +1,7 @@
+---
+title: 'Legacy CSS Support for Astro & Tailwind CSS v4'
+description: 'Configuration and architectural details for supporting legacy browsers.'
+---
 # Legacy CSS Support for Astro & Tailwind CSS v4
 
 This document outlines the configuration, required packages, and architectural details for supporting legacy browsers (e.g., IE 11, older Safari/Chrome/Firefox) in this Astro project.
