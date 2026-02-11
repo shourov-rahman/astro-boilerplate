@@ -8,7 +8,7 @@ A modern, high-performance, and SEO-optimized **Astro 5** boilerplate designed f
 - **Styling**: [Tailwind CSS v4](https://tailwindcss.com/) - Using the new Vite-based engine for ultra-fast builds.
 - **Interactivity**: [Alpine.js](https://alpinejs.dev/) - Lightweight JavaScript framework for small-to-medium interactivity.
 - **Content**: [MDX](https://mdxjs.com/) - Use JSX components in your Markdown.
-- **SEO Ready**: 
+- **SEO Ready**:
   - `astro-seo` for managing meta tags.
   - Automatic `sitemap` generation.
   - `astro-robots-txt` for search engine guidance.
@@ -76,6 +76,7 @@ pnpm format
 ## 🔧 Configuration
 
 ### Tailwind CSS v4
+
 The project uses the new CSS-first configuration. You can customize your theme in `src/styles/global.css`:
 
 ```css
@@ -86,7 +87,9 @@ The project uses the new CSS-first configuration. You can customize your theme i
 ```
 
 ### SEO & Meta Tags
+
 The `Layout.astro` component is pre-configured with SEO best practices. Simply pass `title` and `description` props to the layout.
 
 ## 📄 License
+
 MIT

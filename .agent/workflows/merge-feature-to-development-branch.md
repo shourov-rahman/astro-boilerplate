@@ -5,6 +5,7 @@ description: Merge feature branch to development branch
 ## Pre-Merge Checklist
 
 Before starting the merge process, ensure:
+
 - ✅ Feature is complete and tested
 - ✅ All changes are committed (no uncommitted work)
 - ✅ Feature branch builds successfully
@@ -26,12 +27,14 @@ git status
 ```
 
 **Expected output:**
+
 ```
 On branch feature/your-feature-name
 nothing to commit, working tree clean
 ```
 
 ⚠️ **If you have uncommitted changes:**
+
 ```bash
 # Option A: Commit them
 git add .
@@ -62,6 +65,7 @@ pnpm run dev
 ```
 
 **Validation checklist:**
+
 - ✅ No linting errors
 - ✅ Build completes successfully
 - ✅ Dev server starts without errors
@@ -73,7 +77,6 @@ pnpm run dev
 ---
 
 ## Step 3: Merge Feature with Development
-
 
 ```bash
 
@@ -87,15 +90,18 @@ git merge origin/development
 **Two scenarios:**
 
 ### A) Clean Merge (No Conflicts)
+
 ```
 Auto-merging src/components/Hero.astro
 Merge made by the 'ort' strategy.
  src/components/Hero.astro | 10 +++++-----
  1 file changed, 5 insertions(+), 5 deletions(-)
 ```
+
 ✅ Continue to validation
 
 ### B) Merge Conflicts
+
 ```
 Auto-merging src/components/Hero.astro
 CONFLICT (content): Merge conflict in src/components/Hero.astro
@@ -103,6 +109,7 @@ Automatic merge failed; fix conflicts and then commit the result.
 ```
 
 **Resolve conflicts:**
+
 1. Open conflicted files in your editor
 2. Look for conflict markers (`<<<<<<<`, `=======`, `>>>>>>>`)
 3. Resolve conflicts by choosing the correct code
@@ -153,6 +160,7 @@ git status
 ```
 
 **Expected output:**
+
 ```
 On branch development
 Your branch is up to date with 'origin/development'.
@@ -175,15 +183,18 @@ git merge feature/your-feature-name --no-ff
 **Two scenarios:**
 
 ### A) Clean Merge (No Conflicts)
+
 ```
 Merge made by the 'ort' strategy.
  src/components/Hero.astro | 45 +++++++++++++++++++++
  src/pages/index.astro     | 12 +++---
  2 files changed, 52 insertions(+), 5 deletions(-)
 ```
+
 ✅ Continue to Step 7
 
 ### B) Merge Conflicts
+
 ```
 Auto-merging src/components/Hero.astro
 CONFLICT (content): Merge conflict in src/components/Hero.astro
@@ -212,6 +223,7 @@ git push origin development
 ```
 
 **Expected output:**
+
 ```
 Counting objects: 15, done.
 Delta compression using up to 8 threads.
@@ -221,13 +233,13 @@ Total 15 (delta 8), reused 0 (delta 0)
 To github.com:username/repo.git
    abc1234..def5678  development -> development
 ```
-✅ **Merge complete!**
 
+✅ **Merge complete!**
 
 ## Common Issues & Solutions
 
-
 ### Issue: Conflicts in package-lock.json or pnpm-lock.yaml
+
 ```bash
 # Accept the version from development
 git checkout --theirs pnpm-lock.yaml
@@ -239,13 +251,3 @@ pnpm install
 git add pnpm-lock.yaml
 git commit -m "merge: resolve lock file conflicts"
 ```
-
-
-
-
-
-
-
-
-
-

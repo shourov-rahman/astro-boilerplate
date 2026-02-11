@@ -2,6 +2,7 @@
 title: 'Testing Guide'
 description: 'Guide for unit and end-to-end testing with Vitest and Playwright.'
 ---
+
 # Testing Guide
 
 This project uses **Vitest** for unit tests and **Playwright** for end-to-end (e2e) tests, following Astro best practices.
@@ -9,11 +10,13 @@ This project uses **Vitest** for unit tests and **Playwright** for end-to-end (e
 ## 📦 Installed Packages
 
 ### Vitest (Unit Testing)
+
 - `vitest` - Fast unit test framework powered by Vite
 - `@vitest/ui` - Interactive UI for running and debugging tests
 - `happy-dom` - Lightweight DOM implementation for testing
 
 ### Playwright (E2E Testing)
+
 - `@playwright/test` - End-to-end testing framework
 - `@types/node` - TypeScript types for Node.js
 
@@ -122,11 +125,11 @@ import { test, expect } from '@playwright/test';
 test.describe('Feature Name', () => {
   test('should perform action', async ({ page }) => {
     await page.goto('/');
-    
+
     const element = page.getByRole('button', { name: 'Click me' });
     await expect(element).toBeVisible();
     await element.click();
-    
+
     await expect(page).toHaveURL('/success');
   });
 });
@@ -166,6 +169,7 @@ The `tsconfig.json` includes Vitest global types for autocompletion:
 ## 🎯 Best Practices
 
 ### Unit Tests
+
 1. **Test pure functions first** - Start with utility functions and helpers
 2. **Use descriptive test names** - Clearly state what is being tested
 3. **Follow AAA pattern** - Arrange, Act, Assert
@@ -173,6 +177,7 @@ The `tsconfig.json` includes Vitest global types for autocompletion:
 5. **Mock external dependencies** - Use Vitest's mocking capabilities
 
 ### E2E Tests
+
 1. **Test user journeys** - Focus on critical user paths
 2. **Use semantic selectors** - Prefer `getByRole`, `getByLabel` over CSS selectors
 3. **Wait for elements** - Use Playwright's auto-waiting features
@@ -180,6 +185,7 @@ The `tsconfig.json` includes Vitest global types for autocompletion:
 5. **Keep tests maintainable** - Use page objects for complex pages
 
 ### General
+
 - Run tests before committing code
 - Maintain high test coverage for critical paths
 - Update tests when changing functionality
@@ -189,6 +195,7 @@ The `tsconfig.json` includes Vitest global types for autocompletion:
 ## 🔍 Coverage Reports
 
 After running `pnpm run test:coverage`, coverage reports are generated in:
+
 - `coverage/` directory (HTML report)
 - Terminal output (text summary)
 
@@ -197,12 +204,14 @@ Open `coverage/index.html` in your browser to view detailed coverage information
 ## 🐛 Debugging
 
 ### Vitest
+
 - Use `test.only()` to run a single test
 - Use `test.skip()` to skip a test
 - Add `console.log()` statements for debugging
 - Use the Vitest UI for interactive debugging
 
 ### Playwright
+
 - Use `--debug` flag to run in debug mode
 - Use `page.pause()` to pause execution
 - Use `--ui` flag for interactive mode
@@ -219,6 +228,7 @@ Open `coverage/index.html` in your browser to view detailed coverage information
 ## 🚀 CI/CD Integration
 
 The test setup is CI-ready with:
+
 - Automatic retries on CI environments
 - Optimized worker configuration
 - `forbidOnly` to prevent accidental `.only()` in CI
@@ -240,22 +250,22 @@ jobs:
         with:
           node-version: '20'
           cache: 'pnpm'
-      
+
       - name: Install dependencies
         run: pnpm install
-      
+
       - name: Run unit tests
         run: pnpm run test:run
-      
+
       - name: Build project
         run: pnpm run build
-      
+
       - name: Install Playwright browsers
         run: pnpm exec playwright install --with-deps
-      
+
       - name: Run e2e tests
         run: pnpm run test:e2e
-      
+
       - name: Upload test results
         if: always()
         uses: actions/upload-artifact@v4

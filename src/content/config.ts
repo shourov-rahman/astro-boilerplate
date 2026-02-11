@@ -11,8 +11,6 @@ const blog = defineCollection({
   }),
 });
 
-
-
 const docs = defineCollection({
   type: 'content',
   schema: z.object({

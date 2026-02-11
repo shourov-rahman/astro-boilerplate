@@ -18,6 +18,7 @@ Good writing is specific, opinionated, and conversational. Bad writing is generi
 ### ❌ Patterns to Avoid
 
 #### 1. Over-Enthusiastic Openings
+
 ```markdown
 ❌ "We're thrilled to announce..."
 ❌ "Today, we're excited to share..."
@@ -30,6 +31,7 @@ Good writing is specific, opinionated, and conversational. Bad writing is generi
 ```
 
 #### 2. Vague Claims Without Evidence
+
 ```markdown
 ❌ "This revolutionary approach transforms how developers work."
 ❌ "Leveraging cutting-edge AI technology..."
@@ -42,6 +44,7 @@ Good writing is specific, opinionated, and conversational. Bad writing is generi
 ```
 
 #### 3. Corporate Buzzword Soup
+
 ```markdown
 ❌ "Empowering developers to leverage synergies..."
 ❌ "Best-in-class solutions for enterprise-grade..."
@@ -54,6 +57,7 @@ Good writing is specific, opinionated, and conversational. Bad writing is generi
 ```
 
 #### 4. Unnecessary Hedging
+
 ```markdown
 ❌ "This might help you potentially improve..."
 ❌ "You could possibly consider..."
@@ -66,6 +70,7 @@ Good writing is specific, opinionated, and conversational. Bad writing is generi
 ```
 
 #### 5. Generic Transitions
+
 ```markdown
 ❌ "Let's dive deep into..."
 ❌ "Without further ado..."
@@ -77,8 +82,10 @@ Good writing is specific, opinionated, and conversational. Bad writing is generi
 ```
 
 #### 6. Robotic Lists
+
 ```markdown
 ❌ "Here are 5 key benefits:
+
 1. Enhanced productivity
 2. Improved efficiency
 3. Better collaboration
@@ -86,6 +93,7 @@ Good writing is specific, opinionated, and conversational. Bad writing is generi
 5. Streamlined workflows"
 
 ✅ "This saves you time in three ways:
+
 - No more searching docs for edge cases—they're encoded in the package
 - AI applies patterns consistently—you don't chase style violations
 - Tests are generated, not written—coverage without the grind"
@@ -96,6 +104,7 @@ Good writing is specific, opinionated, and conversational. Bad writing is generi
 ### ✅ Patterns to Use
 
 #### 1. Specific Details
+
 ```markdown
 ❌ "Many developers struggle with migrations."
 ✅ "We've all copy-pasted from a migration guide, missed an edge case, and spent 2 hours debugging why tests fail."
@@ -108,6 +117,7 @@ Good writing is specific, opinionated, and conversational. Bad writing is generi
 ```
 
 #### 2. Direct, Confident Language
+
 ```markdown
 ❌ "This approach may help you potentially improve your workflow."
 ✅ "This cuts your migration time in half."
@@ -120,6 +130,7 @@ Good writing is specific, opinionated, and conversational. Bad writing is generi
 ```
 
 #### 3. Honest Limitations
+
 ```markdown
 ❌ "Our comprehensive solution handles all use cases."
 ✅ "This won't catch dynamic imports or string templates. You'll need to fix those manually."
@@ -132,6 +143,7 @@ Good writing is specific, opinionated, and conversational. Bad writing is generi
 ```
 
 #### 4. Conversational Asides
+
 ```markdown
 ✅ "You could write a 400-line script for this. We did. It broke on Unicode."
 ✅ "Turns out, most projects have 3-5 edge cases that codemods can't handle."
@@ -139,6 +151,7 @@ Good writing is specific, opinionated, and conversational. Bad writing is generi
 ```
 
 #### 5. Active Voice, Present Tense
+
 ```markdown
 ❌ "The package can be installed by running the command."
 ✅ "Install the package: prpm install @vendor/migration"
@@ -151,6 +164,7 @@ Good writing is specific, opinionated, and conversational. Bad writing is generi
 ```
 
 #### 6. Strong Opening Sentences
+
 ```markdown
 ❌ "In this post, we will discuss how migrations work."
 ✅ "Codemods automate 70% of migrations. This gets you to 95%."
@@ -165,12 +179,14 @@ Good writing is specific, opinionated, and conversational. Bad writing is generi
 ## Tone Calibration
 
 ### Technical Posts
+
 - **Voice**: Knowledgeable peer, not teacher
 - **Assumptions**: Reader knows basics, wants specifics
 - **Evidence**: Code examples, performance numbers, real packages
 - **Length**: As long as needed to be complete, as short as possible to respect time
 
 **Example:**
+
 ```markdown
 # Converting Copilot Rules to Claude Format
 
@@ -189,18 +205,21 @@ Conversion quality: 94% (6% requires manual review for negation patterns).
 ```
 
 ### Vision Posts
+
 - **Voice**: Opinionated builder with receipts
 - **Assumptions**: Reader is skeptical, needs convincing
 - **Evidence**: Real-world examples, before/after, objections addressed
 - **Length**: Long enough to make the case, tight enough to stay focused
 
 **Example:**
+
 ```markdown
 # Why Docs Aren't Enough
 
 Stripe's migration guide is 12,000 words. It's comprehensive, well-written, and most developers skim it.
 
 Why? Because reading docs requires:
+
 1. Find the right section (3-5 minutes)
 2. Understand the pattern (5-10 minutes)
 3. Apply to your specific case (10-30 minutes)
@@ -212,13 +231,15 @@ PRPM packages encode those patterns once. AI applies them consistently. Total ti
 ```
 
 ### Tutorial Posts
+
 - **Voice**: Experienced guide who's made the mistakes
 - **Assumptions**: Reader wants to follow along, copy/paste, learn
 - **Evidence**: Runnable examples, expected output, common pitfalls
 - **Length**: Complete walkthrough with no missing steps
 
 **Example:**
-```markdown
+
+````markdown
 # Publishing Your First PRPM Package
 
 ## What You'll Build
@@ -243,6 +264,7 @@ Subtype: rule
 Name: no-default-exports
 Description: Enforce named exports in TypeScript
 ```
+````
 
 This creates `prpm.json` and `.cursorrules`.
 
@@ -250,7 +272,8 @@ This creates `prpm.json` and `.cursorrules`.
 
 Edit `.cursorrules`:
 [... full example ...]
-```
+
+````
 
 ## Structural Techniques
 
@@ -259,9 +282,10 @@ Edit `.cursorrules`:
 ❌ "In this article, we'll explore the challenges of API migrations, discuss various approaches, and ultimately present a solution."
 
 ✅ "API migrations fail because docs explain the 'what' but not the 'why.' Here's how to ship the reasoning with the code."
-```
+````
 
 ### 2. Use Subheadings as Scannable Statements
+
 ```markdown
 ❌ ## Introduction
 ❌ ## Background
@@ -275,18 +299,23 @@ Edit `.cursorrules`:
 ```
 
 ### 3. Show, Don't Just Tell
-```markdown
+
+````markdown
 ❌ "The conversion process is simple and efficient."
 
 ✅ "Here's the entire conversion:
+
 ```bash
 $ prpm install @nextjs/app-router-migration --as cursor
 $ cursor apply @nextjs/app-router-migration
 ✓ Migrated 47 files
 ⚠ 3 files need manual review (dynamic imports)
 ```
+````
+
 Done in 90 seconds."
-```
+
+````
 
 ### 4. Break Up Walls of Text
 - Use subheadings every 2-3 paragraphs
@@ -302,9 +331,10 @@ Done in 90 seconds."
 ✅ "Try it:
 ```bash
 prpm install @popular/package-name
-```
+````
 
 Have questions? Follow [@prpmdev](https://twitter.com/prpmdev) or [open an issue](https://github.com/pr-pm/prpm/issues)."
+
 ```
 
 ## Voice Examples from PRPM
@@ -377,3 +407,4 @@ PRPM users are developers. They have good bullshit detectors. Write like you res
 **Good writing is revision.** First draft: get ideas down. Second draft: cut 30%. Third draft: add specifics. Fourth draft: read it out loud.
 
 If you wouldn't say it in a GitHub issue comment, don't put it in a blog post.
+```

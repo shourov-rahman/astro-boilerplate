@@ -3,7 +3,6 @@ name: Refactor Clean
 description: Refactor Clean
 ---
 
-
 Safely identify and remove dead code with test verification:
 
 1. Run dead code analysis tools:

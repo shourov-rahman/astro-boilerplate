@@ -86,7 +86,7 @@ src/
 - **NEVER use `JSX.Element` namespace** - use React types directly
 
 ```typescript
- 
+
 // ✅ CORRECT: Modern React 19 typing
 import { ReactElement } from 'react';
 
@@ -266,8 +266,6 @@ const envSchema = z.object({
 export const env = envSchema.parse(process.env);
 ```
 
-
-
 ## 🚀 Performance Guidelines
 
 ### Next.js 16 Optimizations
@@ -287,9 +285,15 @@ export const env = envSchema.parse(process.env);
 
 ```astro
 <!-- Swiss Style Card Component -->
-<div class="flex flex-col border-2 border-gray-200 bg-gray-50 p-6 rounded-none hover:border-red-600 transition-colors duration-300">
-  <h2 class="text-4xl font-bold uppercase tracking-tighter text-gray-950">Title</h2>
-  <span class="mt-2 text-sm uppercase tracking-wider text-gray-600">Category</span>
+<div
+  class="flex flex-col rounded-none border-2 border-gray-200 bg-gray-50 p-6 transition-colors duration-300 hover:border-red-600"
+>
+  <h2 class="text-4xl font-bold tracking-tighter text-gray-950 uppercase">
+    Title
+  </h2>
+  <span class="mt-2 text-sm tracking-wider text-gray-600 uppercase"
+    >Category</span
+  >
 </div>
 ```
 
