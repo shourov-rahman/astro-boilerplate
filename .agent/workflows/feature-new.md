@@ -1,6 +1,6 @@
 ---
 name: new feature
-description: Implements a new feature
+description: Implements a new feature 
 ---
 
 You are tasked with implementing a new feature described by "$Argument".
@@ -16,17 +16,17 @@ Execute the following structured workflow:
 
 2.  **Discovery & Architecture**:
     - **Context Discovery**:
-      - Identify valid patterns, existing components, and relevant styles.
+      -  Identify valid patterns, existing components, and relevant styles.
       - Read `package.json` to check available dependencies.
 
 3.  **Development Phase**:
     - **Execution**:
-      - Before execution read design and development guide @ui-design-and-development-guide.md
-      - Execute the feature step-by-step.
+       - Execute the feature step-by-step.
 
 4.  **Quality Assurance** :
     - **Static Analysis**: Run `pnpm lint` to catch issues.
     - **Build Check**: Run `pnpm build` to ensure no breaking changes.
+    - **Run Preview**: Run `pnpm preview` to ensure everthing work correctly
     - **Correction**: If checks fail, analyze and fix errors immediately.
 
 5.  **Finalization**:

@@ -2,6 +2,7 @@
 trigger: always_on
 ---
 
+
 ## Core Development Philosophy
 
 ### KISS (Keep It Simple, Stupid)
@@ -14,48 +15,48 @@ Avoid building functionality on speculation. Implement features only when they a
 
 ### Design Principles
 
-- **Islands Architecture**: Ship minimal JavaScript, hydrate only what needs interactivity.
-- **Performance by Default**: Static-first with selective hydration for optimal performance.
-- **Content-Driven**: Optimized for content-heavy websites with type-safe content management.
-- **Zero JavaScript by Default**: Only ship JavaScript when explicitly needed.
-- **Utility-First Styling**: Leverage Tailwind CSS to implement the **Swiss Grid / International Typographic Style** defined in `ui-design-guide.md`.
+-   **Islands Architecture**: Ship minimal JavaScript, hydrate only what needs interactivity.
+-   **Performance by Default**: Static-first with selective hydration for optimal performance.
+-   **Content-Driven**: Optimized for content-heavy websites with type-safe content management.
+-   **Zero JavaScript by Default**: Only ship JavaScript when explicitly needed.
+-   **Utility-First Styling**: Leverage Tailwind CSS to implement the **Swiss Grid / International Typographic Style** defined in `ui-design-guide.md`.
 
 ## 🤖 AI Assistant Guidelines
 
 ### Context Awareness
 
-- When implementing features, always check existing patterns first.
-- Prefer static generation regarding the Cloudflare adapter configuration.
-- Use `Alpine.js` for lightweight interactivity when full framework overhead isn't justified.
+-   When implementing features, always check existing patterns first.
+-   Prefer static generation regarding the Cloudflare adapter configuration.
+-   Use `Alpine.js` for lightweight interactivity when full framework overhead isn't justified.
 
 ### Common Pitfalls to Avoid
 
-- Over-hydrating components that could be static.
-- Ignoring Astro's partial hydration benefits.
-- Creating duplicate functionality across different framework islands.
-- Overwriting existing integrations without checking alternatives.
-- Not using Tailwind's `@apply` or utility classes for reusability.
+-   Over-hydrating components that could be static.
+-   Ignoring Astro's partial hydration benefits.
+-   Creating duplicate functionality across different framework islands.
+-   Overwriting existing integrations without checking alternatives.
+-   Not using Tailwind's `@apply` or utility classes for reusability.
 
 ### Workflow Patterns
 
-- Use "think hard" for hydration strategy decisions.
-- Break complex interactive components into smaller, focused islands.
-- Validate hydration requirements before implementation.
+-   Use "think hard" for hydration strategy decisions.
+-   Break complex interactive components into smaller, focused islands.
+-   Validate hydration requirements before implementation.
 
 ## 🧱 Code Structure & Modularity
 
 ### File and Component Limits
 
-- **Never create a file longer than 500 lines of code.** If approaching this limit, refactor by splitting into modules or helper components.
-- **Astro components should be under 200 lines** for better maintainability.
-- **Functions should be short and focused sub 50 lines** and have a single responsibility.
-- **Organize code by feature and framework**, keeping related components together.
+-   **Never create a file longer than 500 lines of code.** If approaching this limit, refactor by splitting into modules or helper components.
+-   **Astro components should be under 200 lines** for better maintainability.
+-   **Functions should be short and focused sub 50 lines** and have a single responsibility.
+-   **Organize code by feature and framework**, keeping related components together.
 
 ### Environment Configuration (astro:env)
 
-- **Type-Safe Environment Variables**: Validation and TypeScript support.
-- **Runtime Validation**: Automatic validation at build time.
-- **Client/Server Separation**: Clear distinction between public and private variables.
+-   **Type-Safe Environment Variables**: Validation and TypeScript support.
+-   **Runtime Validation**: Automatic validation at build time.
+-   **Client/Server Separation**: Clear distinction between public and private variables.
 
 ```typescript
 // env.d.ts (Create this if missing)
@@ -103,11 +104,11 @@ src/
 
 ### MANDATORY Type Requirements
 
-- **NEVER use `any` type** - use `unknown` if type is truly unknown.
-- **MUST use explicit type imports** with `import type { }` syntax.
-- **MUST define props interfaces** for all Astro components.
-- **MUST use Astro's built-in types** like `HTMLAttributes`, `ComponentProps`.
-- **MUST validate content with Zod schemas** in content collections.
+-   **NEVER use `any` type** - use `unknown` if type is truly unknown.
+-   **MUST use explicit type imports** with `import type { }` syntax.
+-   **MUST define props interfaces** for all Astro components.
+-   **MUST use Astro's built-in types** like `HTMLAttributes`, `ComponentProps`.
+-   **MUST validate content with Zod schemas** in content collections.
 
 ### Component Props Typing (MANDATORY)
 
@@ -191,7 +192,7 @@ const { Content } = await post.render();
 </BlogLayout>
 ```
 
-## 🧪 Testing Strategy
+## 🧪 Testing Strategy 
 
 ### MUST Meet These Testing Standards
 
@@ -279,6 +280,8 @@ test("POST /api/newsletter validates email", async () => {
 });
 ```
 
+
+
 ## 🚀 Performance Optimization
 
 ### Image Optimization (MANDATORY)
@@ -326,22 +329,16 @@ const userPreferences = await getUserPreferences(Astro.locals.userId);
 
 ```astro
 <!-- Swiss Style Card Component -->
-<div
-  class="flex flex-col rounded-none border-2 border-gray-200 bg-gray-50 p-6 transition-colors duration-300 hover:border-red-600"
->
-  <h2 class="text-4xl font-bold tracking-tighter text-gray-950 uppercase">
-    Title
-  </h2>
-  <span class="mt-2 text-sm tracking-wider text-gray-600 uppercase"
-    >Category</span
-  >
+<div class="flex flex-col border-2 border-gray-200 bg-gray-50 p-6 rounded-none hover:border-red-600 transition-colors duration-300">
+  <h2 class="text-4xl font-bold uppercase tracking-tighter text-gray-950">Title</h2>
+  <span class="mt-2 text-sm uppercase tracking-wider text-gray-600">Category</span>
 </div>
 ```
 
 ## 🎨 Icon Strategy
+-   **MUST use `astro-icon`**: Use the `astro-icon` package for all icons to ensure SVG optimization and consistency.
+-   **Icon Collection**: Prefer using standard collections (e.g., `lucide`, `heroicons`, or `material-design-icons`) via `astro-icon`. Avoid using raw SVGs or emojis for UI icons.
 
-- **MUST use `astro-icon`**: Use the `astro-icon` package for all icons to ensure SVG optimization and consistency.
-- **Icon Collection**: Prefer using standard collections (e.g., `lucide`, `heroicons`, or `material-design-icons`) via `astro-icon`. Avoid using raw SVGs or emojis for UI icons.
 
 ## ⚠️ CRITICAL GUIDELINES (MUST FOLLOW ALL)
 
@@ -359,13 +356,14 @@ const userPreferences = await getUserPreferences(Astro.locals.userId);
 12. **Cloudflare Compatibility** - Ensure all server-side code is compatible with Cloudflare Workers runtime.
 13. **MINIMUM 80% test coverage** - Use Vitest with Container API
 
+
 ### FORBIDDEN Practices
 
-- **NEVER use npm or yarn** - MUST use pnpm.
-- **NEVER use client:load** without justification.
-- **NEVER skip content validation**.
-- **NEVER use heavy UI libraries** (like Bootstrap/MUI) when Tailwind is available.
-- **NEVER mix concerns** - separate static content from interactive islands.
-- **NEVER use `any` type**.
-- **NEVER ignore build warnings** - address all issues.
-- **NEVER commit unformatted code**.
+-   **NEVER use npm or yarn** - MUST use pnpm.
+-   **NEVER use client:load** without justification.
+-   **NEVER skip content validation**.
+-   **NEVER use heavy UI libraries** (like Bootstrap/MUI) when Tailwind is available.
+-   **NEVER mix concerns** - separate static content from interactive islands.
+-   **NEVER use `any` type**.
+-   **NEVER ignore build warnings** - address all issues.
+-   **NEVER commit unformatted code**.

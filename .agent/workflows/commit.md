@@ -6,13 +6,11 @@ description: Analyze changes and create a smart git commit
 ## Usage
 
 To create a commit, just type:
-
 ```
 /commit
 ```
 
 Or with options:
-
 ```
 /commit --no-verify
 ```
@@ -25,24 +23,23 @@ Or with options:
 2. Performs a `git diff` to understand what changes are being committed
 3. Analyzes the diff to determine if multiple distinct logical changes are present
 4. If multiple distinct changes are detected, suggests breaking the commit into multiple smaller commits
-5. For each commit (or the single commit if not split), take necessary steps to create commit message or messages
+5. For each commit (or the single commit if not split), take necessary steps to create commit message or messages 
+
 
 ## Best Practices for Commits
 
 - **Verify before committing**: Ensure code is linted, builds correctly, and documentation is updated
 - **Atomic commits**: Each commit should contain related changes that serve a single purpose
-- **Split large changes**: If changes touch multiple concerns, split them into separate commits
+- **Split large changes**: If changes touch multiple concerns, split them into separate commits 
 - **Conventional commit format**: Based on the changes, suggest:
-  - The appropriate commit type (feat/fix/docs/style/refactor/perf/test/chore/etc)
-  - A concise, descriptive commit message following conventional commits (must add)
+    - The appropriate commit type (feat/fix/docs/style/refactor/perf/test/chore/etc)
+    - A concise, descriptive commit message following conventional commits (must add)
 
-  - The commit format should be:
-
-  ```
-  $type: description for simple commits
-   Include a body explaining what and why (use bullet points)
-  ```
-
+    - The commit format should be:
+    ```
+    $type: description for simple commits
+     Include a body explaining what and why (use bullet points)
+    ```
 - **Present tense, imperative mood**: Write commit messages as commands (e.g., "add feature" not "added feature")
 - **Concise first line**: Keep the first line under 72 characters
 - **Emoji**: Each commit type is paired with an appropriate emoji
@@ -56,6 +53,7 @@ When analyzing the diff, consider splitting commits based on these criteria:
 3. **File patterns**: Changes to different types of files (e.g., source code vs documentation)
 4. **Logical grouping**: Changes that would be easier to understand or review separately
 5. **Size**: Very large changes that would be clearer if broken down
+
 
 ## Command Options
 

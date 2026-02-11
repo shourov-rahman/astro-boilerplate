@@ -20,7 +20,6 @@ Reduce the size of prompts, rules, workflows by consolidating repeated content, 
 ### 2. Use Easy Mathematical Notation
 
 Replace verbose explanations with simple equations:
-
 - Inequalities: `c ≤ 9`, `c ≥ 10`, `n < 10`
 - Arrows: `→` for transformations (e.g., `format = N`)
 - Equals: `=` for definitions
@@ -76,7 +75,6 @@ Replace verbose explanations with simple equations:
 ## Output
 
 The reduced prompt should:
-
 - Be 40-60% smaller than original
 - Maintain all essential information
 - Use easy-to-understand notation
