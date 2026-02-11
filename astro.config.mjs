@@ -26,13 +26,16 @@ export default defineConfig({
   },
   vite: {
     plugins: [tailwindcss()],
+    css: {
+      postcss: './postcss.config.cjs',
+    },
   },
   integrations: [
     mdx(),
     sitemap(),
     partytown({
       config: {
-        forward: ["dataLayer.push"],
+        forward: ['dataLayer.push'],
       },
     }),
     alpinejs(),

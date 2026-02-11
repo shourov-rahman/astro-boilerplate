@@ -1,6 +1,6 @@
 @import 'tailwindcss';
 
-@custom-variant dark (&:where(.dark, .dark *));
+@custom-variant dark (.dark &);
 
 @theme {
   --font-sans: 'Inter', sans-serif;
@@ -8,6 +8,6 @@
 
 @layer base {
   body {
-    @apply bg-white dark:bg-gray-950 text-gray-900 dark:text-gray-50 transition-colors duration-300;
+    @apply bg-white text-gray-900 transition-colors duration-300 dark:bg-gray-950 dark:text-gray-50;
   }
 }
