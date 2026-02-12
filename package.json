@@ -63,7 +63,7 @@
     "prettier-plugin-tailwindcss": "^0.7.2",
     "typescript-eslint": "^8.53.1",
     "vitest": "^4.0.18",
-    "wrangler": "^4.63.0"
+    "wrangler": "^4.65.0"
   },
   "browserslist": [
     "> 0.5%",
