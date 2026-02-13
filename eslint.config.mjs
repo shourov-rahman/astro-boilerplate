@@ -7,6 +7,13 @@ export default [
   ...eslintPluginAstro.configs.recommended,
   eslintConfigPrettier,
   {
-    ignores: ['dist/', '.astro/', 'node_modules/', 'src/env.d.ts'],
+    ignores: [
+      'dist/',
+      '.astro/',
+      'node_modules/',
+      'src/env.d.ts',
+      'coverage/',
+      '.wrangler/',
+    ],
   },
 ];

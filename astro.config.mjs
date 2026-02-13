@@ -14,8 +14,9 @@ import robotsTxt from 'astro-robots-txt';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://example.com',
-  output: 'static',
+  output: 'server',
   adapter: cloudflare({
+    mode: 'directory',
     imageService: 'compile',
   }),
   session: {

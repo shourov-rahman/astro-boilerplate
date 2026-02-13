@@ -14,7 +14,7 @@ Follow these steps to conduct a thorough code review:
 2. **Repository Analysis**
    - Examine the repository structure and identify the primary language/framework
    - Check for configuration files (package.json, requirements.txt, Cargo.toml, etc.)
-   - Review README and documentation for context
+   - Review README and code review related documentation (inside docs repository) for context
 
 3. **Code Quality Assessment**
    - Scan for code smells, anti-patterns, and potential bugs
@@ -56,6 +56,6 @@ Follow these steps to conduct a thorough code review:
    - Prioritize issues by severity (critical, high, medium, low)
    - Provide specific, actionable recommendations
    - Suggest tools and practices for improvement
-   - Create a summary report with next steps
+   - Create/update a summary report in `docs` folder with next steps
 
 Remember to be constructive and provide specific examples with file paths and line numbers where applicable.
